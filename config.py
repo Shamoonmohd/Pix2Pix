@@ -23,9 +23,9 @@ CHECKPOINT_DISC = "disc.pth.tar"
 CHECKPOINT_GEN = "gen.pth.tar"
 ## here we are applying various data augmnetation technique for inpput and target
 both_transform = A.Compose(
-    [A.Resize(width=256, height=256), A.HorizontalFlip(p=0.5), ], additional_targets={"image0": "image"},
+    [A.Resize(width=256, height=256), A.HorizontalFlip(p=0.5),], additional_targets={"image0": "image"},
 )
-## here we are applying various data augmnetation technique for inpput 
+## here we are applying various data augmentation technique for inpput 
 transform_only_input = A.Compose(
     [
         A.HorizontalFlip(p=0.5),
